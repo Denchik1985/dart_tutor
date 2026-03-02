@@ -1,9 +1,10 @@
 import 'dart:io';
+import 'dart:convert';
 
 void main() {
   print('Как тебя зовут, Путник?');
 
-  String? name = stdin.readLineSync();
+  String? name = stdin.readLineSync(encoding: utf8);
 
   if (name != null && name.isNotEmpty) {
     print('Привет $name! Рад познакомиться!');
