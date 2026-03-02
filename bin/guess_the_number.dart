@@ -17,7 +17,13 @@ void main() {
     String? input = stdin.readLineSync(encoding: utf8);
     if (input == null || input.isEmpty) continue;
 
+    try {
     guess = int.parse(input);
+    } catch (e) {
+      print('Вводи только цифры');
+      continue;
+    }
+
 
     if (guess < secret){
       print ('Больше!');
